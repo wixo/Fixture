@@ -19,6 +19,10 @@
 			margin: 2em auto;
 			width:1000px;
 		}
+		.pais
+		{
+			font-weight:bold;
+		}
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -39,7 +43,7 @@
 				}).complete(function(data) {
 					var	leHtml = '';
 					$.each(fixtureAPP.items, function(key,val) {
-						leHtml += '<li>'+fixtureAPP.paises[key]+' : '+val+'</li>';
+						leHtml += '<li><span class="pais">'+fixtureAPP.paises[key]+'</span> : '+val+'</li>';
 					});
 					$(contenedorDOM).find('h1').html(fixtureAPP.titulo);
 					$(contenedorDOM).find('ul').html(leHtml);
